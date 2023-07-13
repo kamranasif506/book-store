@@ -1,23 +1,24 @@
 .logoName {
-    font-size : '1.875rem';
-    font-family :'Montserrat';
-    font-weight : 'bolder';
-    color : '#0290ff';
+  font-size: 1.875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  color: #0290ff;
 }
 
 .iconListItem {
-    border : '1px solid black';
-    border-radius : '50%';
-    width : '40px';
-    height : '40px';
-    display : 'flex';
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
 }
+
 .circleIcon {
-    color: rgb(2, 144, 255);
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto auto;
-  }
+  color: rgb(2, 144, 255);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}

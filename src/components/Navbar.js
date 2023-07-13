@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa6';
-import styles from '../styles/Navbar.module.css';
 import classNames from 'classnames';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
   const iconListItemStyle = {
@@ -12,11 +12,11 @@ const Navbar = () => {
     height: '40px',
     display: 'flex',
   };
- 
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link className={classNames("navbar-brand", styles.logoName)} to="/">
+        <Link className={classNames('navbar-brand', styles.logoName)} to="/">
           Math Magicians
         </Link>
 
@@ -60,6 +60,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;
