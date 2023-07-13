@@ -43,7 +43,7 @@ const BookItem = ({
       <div className="col-4 d-grid justify-content-end" style={{ margin: 'auto auto' }}>
         <p className="m-0">Current Chapter</p>
         <h3>Chapter 17</h3>
-        <button type="button" className="btn btn-info">UPDATE PROGRESS</button>
+        <button type="button" className="btn btn-info text-white" style={{ backgroundColor: '#0290ff' }}>UPDATE PROGRESS</button>
       </div>
     </div>
   );
