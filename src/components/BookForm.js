@@ -20,7 +20,7 @@ const BookForm = ({ onAdd }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row p-3">
       <div className="col-12">
         <h3>ADD NEW BOOK</h3>
       </div>

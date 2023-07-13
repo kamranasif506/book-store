@@ -9,6 +9,13 @@ const BookItem = ({
     onDelete();
   };
 
+  const progressPercentage = 30; // Replace with your desired value
+  const animationTime = '1.5s'; // Replace with the desired animation duration
+
+  const progressStyle = {
+    animation: `loading-${progressPercentage} ${animationTime} linear forwards`,
+  };
+
   return (
     <div className="row p-3 mt-3 border bg-white" id={key}>
       <div className="col-5" style={{ margin: 'auto auto' }}>
@@ -26,10 +33,10 @@ const BookItem = ({
           <div className="col-6 d-flex justify-content-end">
             <div className="progress" data-percentage="70">
               <span className="progress-left">
-                <span className="progress-bar" />
+                <span className="progress-bar" style={progressStyle} />
               </span>
               <span className="progress-right">
-                <span className="progress-bar" />
+                <span className="progress-bar" style={progressStyle} />
               </span>
               <div className="progress-value"> </div>
             </div>
