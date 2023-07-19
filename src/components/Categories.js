@@ -1,10 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const Categories = () => (
-  <div>
-    <h1>Welcome to the Categories Page!</h1>
-    <p>This is the home page of our website.</p>
-  </div>
-);
+const Categories = () => {
+  const status = useSelector((state) => state.categories.status);
+  return (
+    <div>
+      <h1 className="text-center">Welcome to the Categories Page!</h1>
+      <h2 className="text-center text-danger">{status}</h2>
+    </div>
+  );
+};
 
 export default Categories;
