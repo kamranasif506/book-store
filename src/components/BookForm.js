@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../redux/books/bookSlice';
 
-const BookForm = ({ onAdd }) => {
+const BookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !author) {
-      return;
-    }
-    const newBook = {
-      title,
-      author,
-    };
-    onAdd(newBook);
+    dispatch(addItem({ title, author }));
     setTitle('');
     setAuthor('');
   };
@@ -54,10 +50,6 @@ const BookForm = ({ onAdd }) => {
 
     </div>
   );
-};
-
-BookForm.propTypes = {
-  onAdd: PropTypes.func.isRequired,
 };
 
 export default BookForm;
