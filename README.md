@@ -61,13 +61,13 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Setup BookStore.
-- Required Compomemts installed like Router.
-- Router Setup.
-- Component that contains individual book state, as well as a button to delete the book.
-- Component that contains a list to renders individual books.
-- Component that contains a form to create new books.
-- Component that contains a navigation to link to the 2 routes.
+- Add Redux Toolkit.
+- Redux Store configuration.
+- Dispatch actions using useDispatch
+- Added a Button component, which includes
+  -  An event handler that adds a book to the books array (with attributes id, title and author)
+- Added a Button component, which includes:
+  - An event handler that removes a book from the books array (by id)  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
