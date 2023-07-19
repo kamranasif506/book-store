@@ -3,7 +3,7 @@ import bookReducer from './books/bookSlice';
 
 export const store = configureStore({
   reducer: {
-    store: bookReducer,
+    cart: bookReducer,
   },
 });
 export default store;
