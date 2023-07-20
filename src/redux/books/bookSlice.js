@@ -32,7 +32,7 @@ export const addBookItem = createAsyncThunk(
 
 export const removeBookItem = createAsyncThunk('books/removeBookItem', async (itemId, thunkAPI) => {
   try {
-    const res = await axios.post(`${baseUrl}/books/${itemId}`);
+    await axios.delete(`${baseUrl}/books/${itemId}`);
     return itemId;
   } catch (err) {
     return thunkAPI.rejectWithValue(err);

@@ -11,10 +11,10 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newItemId = uuidv4();
+    const uniqueId = uuidv4().replace(/-/g, '');
 
     const newBook = {
-      item_id: newItemId,
+      item_id: uniqueId,
       title,
       author,
       category: 'Fiction',
