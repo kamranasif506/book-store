@@ -8,8 +8,8 @@ const BookList = ({ books }) => (
     <div className="col-12">
       {books.map((book) => (
         <BookItem
-          key={book.id}
-          id={book.id}
+          key={book.item_id}
+          id={book.item_id}
           title={book.title}
           author={book.author}
 
@@ -22,7 +22,7 @@ const BookList = ({ books }) => (
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      item_id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
     }),
