@@ -7,7 +7,6 @@ import Categories from './components/Categories';
 import { getBookItems } from './redux/books/bookSlice';
 
 function App() {
-  // const { isLoading } = useSelector((state) => state.Books);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBookItems());

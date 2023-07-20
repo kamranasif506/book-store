@@ -1,0 +1,58 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loader1 {
+    display:inline-block;
+    font-size:0px;
+    padding:0px;
+ }
+ .loader1 span {
+    vertical-align: middle;
+    border-radius: 100%;
+    display: inline-block;
+    width: 25px; /* Increase the width and height to make the loader bigger */
+    height: 25px;
+    margin: 5px 3px; /* Increase the margin to add more space between the loader circles */
+    background: rgba(55, 156, 246, 0.6);
+    -webkit-animation: loader1 0.8s linear infinite alternate;
+    animation: loader1 0.8s linear infinite alternate;
+  }
+ .loader1 span:nth-child(1) {
+    -webkit-animation-delay:-1s;
+    animation-delay:-1s;
+   background:rgba(55, 156, 246, 0.6);
+ }
+ .loader1 span:nth-child(2) {
+    -webkit-animation-delay:-0.8s;
+    animation-delay:-0.8s;
+   background:rgba(55, 156, 246, 0.8);
+ }
+ .loader1 span:nth-child(3) {
+    -webkit-animation-delay:-0.26666s;
+    animation-delay:-0.26666s;
+   background:rgba(55, 156, 246,1);
+ }
+ .loader1 span:nth-child(4) {
+    -webkit-animation-delay:-0.8s;
+    animation-delay:-0.8s;
+   background:rgba(55, 156, 246,0.8);
+   
+ }
+ .loader1 span:nth-child(5) {
+    -webkit-animation-delay:-1s;
+    animation-delay:-1s;
+   background:rgba(55, 156, 246,0.4);
+ }
+ 
+ @keyframes loader1 {
+    from {transform: scale(0, 0);}
+    to {transform: scale(1, 1);}
+ }
+ @-webkit-keyframes loader1 {
+    from {-webkit-transform: scale(0, 0);}
+    to {-webkit-transform: scale(1, 1);}
+ }
+ 

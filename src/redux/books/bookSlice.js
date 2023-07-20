@@ -70,7 +70,6 @@ const bookSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getBookItems.fulfilled, (state, action) => {
-        // console.log(action);
         state.isLoading = false;
         if (action.payload === '') {
           state.bookItems = [];
@@ -79,13 +78,10 @@ const bookSlice = createSlice({
             item_id: itemId,
             ...item[0],
           }));
-          // console.log(bookItemsArray);
           state.bookItems = bookItemsArray;
-          // console.log(state);
         }
       })
       .addCase(getBookItems.rejected, (state) => {
-        // console.log(action);
         state.isLoading = false;
       })
       .addCase(addBookItem.pending, (state) => {
@@ -97,19 +93,16 @@ const bookSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(addBookItem.rejected, (state) => {
-        // console.log(action);
         state.isLoading = false;
       })
       .addCase(removeBookItem.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(removeBookItem.fulfilled, (state, action) => {
-        console.log(action.payload);
         state.bookItems = state.bookItems.filter((item) => item.item_id !== action.payload);
         state.isLoading = false;
       })
       .addCase(removeBookItem.rejected, (state) => {
-        // console.log(action);
         state.isLoading = false;
       });
   },
