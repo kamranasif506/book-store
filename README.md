@@ -61,13 +61,11 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Add Redux Toolkit.
-- Redux Store configuration.
+- Used [BookStore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739) to store and fetch books data.
+- Used axios and createAsyncThunk to make HTTP request.
 - Dispatch actions using useDispatch
-- Added a Button component, which includes
-  -  An event handler that adds a book to the books array (with attributes id, title and author)
-- Added a Button component, which includes:
-  - An event handler that removes a book from the books array (by id)  
+- Fetch books from the Bookstore API after the component has rendered
+- Refactor add book and remove book features to persist your changes in the server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

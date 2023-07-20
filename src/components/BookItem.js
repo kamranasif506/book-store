@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Progress.scss';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeItem } from '../redux/books/bookSlice';
+import { removeBookItem } from '../redux/books/bookSlice';
 
 const BookItem = ({ id, title, author }) => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const BookItem = ({ id, title, author }) => {
             type="button"
             className="list-inline-item border-0 pr-3 bg-white"
             onClick={() => {
-              dispatch(removeItem(id));
+              dispatch(removeBookItem(id));
             }}
             style={{ borderRight: '1px solid black !important', paddingRight: '7px' }}
           >
@@ -68,7 +68,7 @@ const BookItem = ({ id, title, author }) => {
 };
 
 BookItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
