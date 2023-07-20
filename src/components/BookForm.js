@@ -13,17 +13,11 @@ const BookForm = () => {
     e.preventDefault();
     const newItemId = uuidv4();
 
-    // const newBook = {
-    //   item_id: newItemId,
-    //   title,
-    //   author,
-    //   category: "Fiction",
-    // };
     const newBook = {
       item_id: newItemId,
-      title: 'The title of the book',
-      author: 'The author of the book',
-      category: 'The category of the book',
+      title,
+      author,
+      category: 'Fiction',
     };
 
     dispatch(addBookItem(newBook));

@@ -20,8 +20,7 @@ export const addBookItem = createAsyncThunk(
   'books/addBookItem',
   async (data, thunkAPI) => {
     try {
-      console.log(data);
-      const res = await axios.post(`${baseUrl}/books`, [data]);
+      const res = await axios.post(`${baseUrl}/books`, data);
       const responseData = res.data[0];
 
       return responseData;
@@ -30,6 +29,15 @@ export const addBookItem = createAsyncThunk(
     }
   },
 );
+
+export const removeBookItem = createAsyncThunk('books/removeBookItem', async (itemId, thunkAPI) => {
+  try {
+    const res = await axios.post(`${baseUrl}/books/${itemId}`);
+    return itemId;
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err);
+  }
+});
 
 const initialState = {
   bookItems: [],
@@ -84,10 +92,23 @@ const bookSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(addBookItem.fulfilled, (state, action) => {
-        console.log(action);
+        const newItem = action.meta.arg;
+        state.bookItems.push(newItem);
         state.isLoading = false;
       })
       .addCase(addBookItem.rejected, (state) => {
+        // console.log(action);
+        state.isLoading = false;
+      })
+      .addCase(removeBookItem.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(removeBookItem.fulfilled, (state, action) => {
+        console.log(action.payload);
+        state.bookItems = state.bookItems.filter((item) => item.item_id !== action.payload);
+        state.isLoading = false;
+      })
+      .addCase(removeBookItem.rejected, (state) => {
         // console.log(action);
         state.isLoading = false;
       });
