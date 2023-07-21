@@ -61,11 +61,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Used [BookStore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739) to store and fetch books data.
-- Used axios and createAsyncThunk to make HTTP request.
-- Dispatch actions using useDispatch
-- Fetch books from the Bookstore API after the component has rendered
-- Refactor add book and remove book features to persist your changes in the server
+- Add Styling
+- Add any missing JSX elements
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
